@@ -52,7 +52,7 @@ const Home: FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          A unique take on Last Man Standing where your game doesn't end until the final whistle of the season. 
+          A unique take on Last Man Standing where your game doesn&apos;t end until the final whistle of the season. 
           Pick your teams wisely and compete for the seasonal prize pool!
         </motion.p>
 

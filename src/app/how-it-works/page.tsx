@@ -62,7 +62,7 @@ const HowItWorksPage: FC = () => {
           <section className="mt-12 space-y-6">
             <h2 className="text-2xl font-semibold text-premier-white">Making Selections</h2>
             <div className="space-y-4">
-              <p className="text-premier-white/80">When it's time to make your weekly selection:</p>
+              <p className="text-premier-white/80">When it&apos;s time to make your weekly selection:</p>
               <ol className="list-decimal pl-5 space-y-2">
                 <li className="text-premier-white/80">Visit the selections channel in Discord</li>
                 <li className="text-premier-white/80">Use the provided format to submit your team</li>
