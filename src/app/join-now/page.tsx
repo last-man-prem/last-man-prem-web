@@ -6,8 +6,10 @@ import Link from 'next/link';
 
 const JoinNowPage: FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8 space-y-8">
-      <motion.h1 
+    <div className="relative min-h-[calc(100vh-4rem)]">
+
+      <div className="container mx-auto px-4 py-24 space-y-8">
+        <motion.h1 
         className="text-4xl font-bold text-premier-white mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -137,6 +139,7 @@ const JoinNowPage: FC = () => {
           </div>
         </section>
       </motion.div>
+      </div>
     </div>
   );
 };

@@ -18,10 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} font-sans bg-gradient-to-b from-premier-purple to-premier-purple-light min-h-screen`}
+        className={`${inter.variable} font-sans bg-gradient-to-br from-[#4A1654] via-[#6B2274] to-[#4A1654] min-h-screen`}
       >
+        <div className="fixed inset-0 bg-[url('/noise.svg')] opacity-[0.07] mix-blend-overlay pointer-events-none"></div>
         <Navigation />
-        <main className="container mx-auto px-4 py-8">
+        <main className="relative">
           {children}
         </main>
       </body>
