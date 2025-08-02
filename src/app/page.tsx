@@ -118,7 +118,7 @@ const Home: FC = () => {
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-premier-gold/10">
                 <Image 
-                  src={getAssetPath("/images/team-selection.webp")}
+                  src={getAssetPath("/images/icons/team-selection.webp")}
                   alt="" 
                   width={32} 
                   height={32} 
