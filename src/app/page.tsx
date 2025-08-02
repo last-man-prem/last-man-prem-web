@@ -4,22 +4,47 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import BackgroundPattern from '@/components/ui/BackgroundPattern';
 import Image from 'next/image';
+import { getBackgroundImages } from '@/utils/backgroundImages';
 
 const Home: FC = () => {
   return (
     <div className="relative min-h-[calc(100vh-4rem)] flex flex-col justify-center">
       <BackgroundPattern />
       
-      {/* Background Image */}
-      <div className="fixed inset-0 opacity-15 -z-10">
-        <Image
-          src="/images/trophylift.webp"
-          alt=""
-          fill
-          className="object-cover object-center blur-[1px]"
-          priority
-          sizes="100vw"
-        />
+      {/* Background Images */}
+      <div className="fixed inset-0 opacity-25 -z-10">
+        {getBackgroundImages().map((image, index, array) => {
+          const src = `/images/backgrounds/homepage/${image}`;
+          const cycleDelay = 10; // Delay in seconds between each transition
+          const totalImages = array.length;
+
+          return (
+            <motion.div
+              key={src}
+              className="absolute inset-0"
+              initial={{ opacity: index === 0 ? 1 : 0 }}
+              animate={{ 
+                opacity: [0, 1, 1, 0],
+                transition: { 
+                  duration: cycleDelay,
+                  delay: index * cycleDelay,
+                  repeat: Infinity,
+                  repeatDelay: (totalImages - 1) * cycleDelay,
+                  times: [0, 0.1, 0.9, 1] // Controls fade in/out timing
+                }
+              }}
+            >
+              <Image
+                src={src}
+                alt=""
+                fill
+                className="object-cover object-center blur-[1px]"
+                priority={index === 0}
+                sizes="100vw"
+              />
+            </motion.div>
+          );
+        })}
       </div>
       
       {/* Hero Section */}

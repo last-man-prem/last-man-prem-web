@@ -3,10 +3,27 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const JoinNowPage: FC = () => {
   return (
     <div className="relative min-h-[calc(100vh-4rem)]">
+      {/* Background Image */}
+      <motion.div 
+        className="fixed inset-0 opacity-25 -z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.25 }}
+        transition={{ duration: 1 }}
+      >
+        <Image
+          src="/images/backgrounds/join-nowpage/discord-background.avif"
+          alt=""
+          fill
+          className="object-cover object-center blur-[1px]"
+          priority
+          sizes="100vw"
+        />
+      </motion.div>
 
       <div className="container mx-auto px-4 py-24 space-y-8">
         <motion.h1 
