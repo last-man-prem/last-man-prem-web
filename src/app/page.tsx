@@ -4,9 +4,9 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import BackgroundPattern from '@/components/ui/BackgroundPattern';
 import Image from 'next/image';
+import Link from 'next/link';
 import { getBackgroundImages } from '@/utils/backgroundImages';
 import { getAssetPath } from '@/utils/assetPath';
-import { usePathname } from 'next/navigation';
 
 const Home: FC = () => {
   return (
@@ -89,7 +89,7 @@ const Home: FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <a 
+          <Link 
             href="/join-now" 
             className="group relative inline-flex items-center px-12 py-4 overflow-hidden rounded-full bg-premier-gold text-premier-purple text-lg font-bold shadow-xl shadow-premier-gold/30 transition-all duration-300 hover:scale-105 hover:shadow-premier-gold/40"
           >
@@ -97,7 +97,7 @@ const Home: FC = () => {
             <span className="relative group-hover:text-premier-gold transition-colors duration-300 ease-out">
               Join the League
             </span>
-          </a>
+          </Link>
         </motion.div>
       </section>
 
