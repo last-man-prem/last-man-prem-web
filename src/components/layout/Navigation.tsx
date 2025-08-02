@@ -1,22 +1,16 @@
 'use client';
 
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const Navigation: FC = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <motion.nav 
         className="p-6 flex justify-between items-center"
         initial={{ y: -100, opacity: 0 }}
-        animate={mounted ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <Link 

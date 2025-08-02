@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 import { motion } from 'framer-motion';
 import BackgroundPattern from '@/components/ui/BackgroundPattern';
 import Image from 'next/image';
@@ -9,12 +9,6 @@ import { getBackgroundImages } from '@/utils/backgroundImages';
 import { getAssetPath } from '@/utils/assetPath';
 
 const Home: FC = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <div className="relative min-h-[calc(100vh-4rem)] flex flex-col justify-center">
       <BackgroundPattern />
@@ -63,7 +57,7 @@ const Home: FC = () => {
         <motion.div
           className="relative"
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={mounted ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <h1 className="text-7xl font-black mb-2">
@@ -82,7 +76,7 @@ const Home: FC = () => {
         <motion.p 
           className="text-2xl text-premier-white/80 max-w-3xl mx-auto leading-relaxed font-light tracking-wide"
           initial={{ opacity: 0, y: 20 }}
-          animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           A unique take on Last Man Standing where your game doesn&apos;t end until the final whistle of the season. 
@@ -92,7 +86,7 @@ const Home: FC = () => {
         <motion.div
           className="flex justify-center gap-6"
           initial={{ opacity: 0, y: 20 }}
-          animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <Link 
@@ -112,7 +106,7 @@ const Home: FC = () => {
         <motion.div 
           className="group relative overflow-hidden bg-gradient-to-br from-premier-purple to-[#2D0031] p-8 rounded-xl shadow-xl transition-all duration-300 border border-premier-gold/10"
           initial={{ opacity: 0, x: -50 }}
-          animate={mounted ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           whileHover={{ 
             scale: 1.02,
@@ -136,7 +130,7 @@ const Home: FC = () => {
         <motion.div 
           className="group relative overflow-hidden bg-gradient-to-br from-premier-purple to-[#2D0031] p-8 rounded-xl shadow-xl transition-all duration-300 border border-premier-gold/10"
           initial={{ opacity: 0, y: 50 }}
-          animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
           whileHover={{ 
             scale: 1.02,
@@ -160,7 +154,7 @@ const Home: FC = () => {
         <motion.div 
           className="group relative overflow-hidden bg-gradient-to-br from-premier-purple to-[#2D0031] p-8 rounded-xl shadow-xl transition-all duration-300 border border-premier-gold/10"
           initial={{ opacity: 0, x: 50 }}
-          animate={mounted ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           whileHover={{ 
             scale: 1.02,
