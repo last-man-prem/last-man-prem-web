@@ -117,14 +117,9 @@ const Home: FC = () => {
           <div className="relative z-10">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-premier-gold/10">
-                <Image 
-                  src={getAssetPath("/images/icons/team-selection.webp")}
-                  alt="" 
-                  width={32} 
-                  height={32} 
-                  className="opacity-90"
-                  priority
-                />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-premier-gold">
+                  <path d="M16 4c1.11 0 2 .89 2 2 0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2zm4 18v-6c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v6h2v-2.5h4V22h2zM12.5 11.5c.83 0 1.5-.67 1.5-1.5S13.33 8.5 12.5 8.5 11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2 .89 2 2S6.61 10 5.5 10 3.5 9.11 3.5 8s.89-2 2-2zm2.5 4.5h-1c-1.1 0-2 .9-2 2V22h2v-2.5h2V22h2v-9.5c0-1.1-.9-2-2-2z"/>
+                </svg>
               </div>
               <h3 className="text-2xl font-black text-premier-gold">Pick Your Teams</h3>
             </div>
