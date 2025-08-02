@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getAssetPath } from '@/utils/assetPath';
 
 const JoinNowPage: FC = () => {
   return (
@@ -16,7 +17,7 @@ const JoinNowPage: FC = () => {
         transition={{ duration: 1 }}
       >
         <Image
-          src="/images/backgrounds/join-nowpage/discord-background.avif"
+          src={getAssetPath("/images/backgrounds/join-nowpage/discord-background.avif")}
           alt=""
           fill
           className="object-cover object-center blur-[1px]"

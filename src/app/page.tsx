@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import BackgroundPattern from '@/components/ui/BackgroundPattern';
 import Image from 'next/image';
 import { getBackgroundImages } from '@/utils/backgroundImages';
+import { getAssetPath } from '@/utils/assetPath';
+import { usePathname } from 'next/navigation';
 
 const Home: FC = () => {
   return (
@@ -14,7 +16,7 @@ const Home: FC = () => {
       {/* Background Images */}
       <div className="fixed inset-0 opacity-25 -z-10">
         {getBackgroundImages().map((image, index, array) => {
-          const src = `/images/backgrounds/homepage/${image}`;
+          const src = getAssetPath(`/images/backgrounds/homepage/${image}`);
           const cycleDelay = 10; // Delay in seconds between each transition
           const totalImages = array.length;
 
@@ -116,7 +118,7 @@ const Home: FC = () => {
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-premier-gold/10">
                 <Image 
-                  src="/images/team-selection.webp" 
+                  src={getAssetPath("/images/team-selection.webp")}
                   alt="" 
                   width={32} 
                   height={32} 

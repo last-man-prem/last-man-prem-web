@@ -3,6 +3,7 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { getAssetPath } from '@/utils/assetPath';
 
 const HowItWorksPage: FC = () => {
   return (
@@ -15,7 +16,7 @@ const HowItWorksPage: FC = () => {
         transition={{ duration: 1 }}
       >
         <Image
-          src="/images/backgrounds/rulespage/premleague1.webp"
+          src={getAssetPath("/images/backgrounds/rulespage/premleague1.webp")}
           alt=""
           fill
           className="object-cover object-center blur-[1px]"

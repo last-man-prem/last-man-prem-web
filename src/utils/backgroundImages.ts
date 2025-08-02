@@ -1,8 +1,7 @@
 export function getBackgroundImages() {
-  const images = [
+  return [
     'trophylift.webp',
     'football.webp',
     'stadium.webp'
   ];
-  return images;
 }
